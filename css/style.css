@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+main {
+  background: lightgray;
+}
+
+.sidebar {
+  width: 30vw;
+  height: 100vh;
+  float: left;
+
+  background: #332b5b;
+  text-align: center;
+}
+
+.sidebar h2 {
+  margin-top: 30vh;
+  color: #dedcea;
+  font-family: sans-serif;
+}
+
+.content {
+  background: yellow;
+  height: 100vh;
+
+  text-align: center;
+}
+
+.content h2 {
+  margin: 0;
+  color: #111;
+  font-family: sans-serif;
+}
