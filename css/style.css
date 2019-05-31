@@ -36,6 +36,8 @@ main {
   margin: 0;
   color: #dedcea;
   font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
 }
 
 .sidebar-body {
@@ -65,6 +67,66 @@ a {
 
 .sidebar-footer img:hover {
   transform: scale(1.5);
+}
+
+/* TEST STUFF  */
+
+.test-container {
+  height: 100px;
+  border: 1px yellow solid;
+}
+
+.test-picture {
+  height: 100px;
+  background: green;
+}
+
+.test-message {
+  position: relative;
+  bottom: 100px;
+
+  height: 100px;
+  color: white;
+  background: red;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.test-words {
+  display: block;
+  /* border: 1px cyan solid; */
+  font-family: sans-serif;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.test-button-container {
+  display: block;
+  position: relative;
+  top: 45%;
+
+  /* border: 1px cyan solid; */
+  transition: all 0.2s ease-in-out;
+}
+
+.test-button {
+  border: none;
+  color: white;
+  background-color: purple;
+  padding: 10px;
+}
+
+.test-message:hover {
+  opacity: 1;
+}
+
+.test-message:hover span {
+  transform: translate(0px, 20px);
+  opacity: 1;
+}
+
+.test-message:hover div {
+  transform: translate(0px, -12px);
 }
 
 .container {
