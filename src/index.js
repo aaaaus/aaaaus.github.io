@@ -5,6 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   austin.addEventListener('click', () => {
     console.log('clicked the name');
-    austin.style.color = '#a3e1b3';
+    austin.style.color = '#feda6a';
   });
 });

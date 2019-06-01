@@ -6,6 +6,13 @@ main {
   background: lightgray;
 }
 
+:root {
+  --bg-color-1: #1d1e22; /** deep gray **/
+  --bg-color-2: #393f4d; /** slate **/
+  --accent-1: #d4d4dc; /** silver **/
+  --accent-2: #feda6a; /** yellow **/
+}
+
 .sidebar {
   width: 25vw;
   height: 100vh;
@@ -13,7 +20,7 @@ main {
   position: fixed;
   box-sizing: border-box;
 
-  background: #1f1a38;
+  background: var(--bg-color-1);
   text-align: center;
 }
 
@@ -23,7 +30,7 @@ main {
   height: 100vh;
   box-sizing: border-box;
   /* background: #4b4959; */
-  background: #ccc;
+  background: var(--bg-color-2);
   padding: 0;
 
   text-align: center;
@@ -32,11 +39,13 @@ main {
 .content h2 {
   margin-bottom: 0;
   font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  letter-spacing: 0.3vw;
+  color: var(--accent-1);
 }
 
 .content h3 {
   margin: 0 0 3vh 0;
+  color: var(--accent-2);
 }
 
 /* .sidebar:hover {
@@ -45,16 +54,21 @@ main {
 
 .sidebar h1 {
   margin: 0;
-  color: #dedcea;
-  font-family: 'Reem Kufi', sans-serif;
+  color: var(--accent-1);
+  font-family: 'Raleway', serif;
   font-size: 2.5vw;
   letter-spacing: 0.3vw;
 }
 
+.sidebar-body h3:nth-child(2) {
+  color: var(--accent-2);
+  font-family: sans-serif;
+}
+
 .sidebar h3 {
   margin-top: 4vh;
-  color: #dedcea;
-  font-family: 'Reem Kufi', sans-serif;
+  color: var(--accent-1);
+  font-family: 'Raleway', sans-serif;
   font-size: 1.2vw;
 }
 
@@ -110,6 +124,7 @@ a {
 .box {
   box-sizing: border-box;
   overflow: hidden;
+  background-color: var(--bg-color-1);
   /* border: 1px dodgerblue solid; */
 }
 
@@ -140,9 +155,9 @@ a {
 
 .project-name {
   display: block;
+  color: var(--accent-1);
   font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
 }
 
 .project-button-container {
@@ -157,7 +172,7 @@ a {
 }
 
 .project-button {
-  border: 2px firebrick solid;
+  border: 2px var(--accent-2) solid;
   width: 150px;
   padding: 10px;
 
