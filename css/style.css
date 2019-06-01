@@ -22,10 +22,21 @@ main {
   width: 75vw;
   height: 100vh;
   box-sizing: border-box;
-  background: #4b4959;
+  /* background: #4b4959; */
+  background: #ccc;
   padding: 0;
 
   text-align: center;
+}
+
+.content h2 {
+  margin-bottom: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.content h3 {
+  margin: 0 0 3vh 0;
 }
 
 /* .sidebar:hover {
@@ -35,8 +46,16 @@ main {
 .sidebar h1 {
   margin: 0;
   color: #dedcea;
-  font-family: sans-serif;
-  letter-spacing: 0.5vw;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 2.5vw;
+  letter-spacing: 0.3vw;
+}
+
+.sidebar h3 {
+  margin-top: 4vh;
+  color: #dedcea;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 1.2vw;
 }
 
 .sidebar-body {
@@ -68,66 +87,6 @@ a {
   transform: scale(1.5);
 }
 
-/************* TEST STUFF  ******************/
-
-.test-container {
-  height: 100px;
-  border: 1px yellow solid;
-}
-
-.test-picture {
-  height: 100px;
-  background: green;
-}
-
-.test-message {
-  position: relative;
-  bottom: 100px;
-
-  height: 100px;
-  color: white;
-  background: red;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-}
-
-.test-words {
-  display: block;
-  /* border: 1px cyan solid; */
-  font-family: sans-serif;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-}
-
-.test-button-container {
-  display: block;
-  position: relative;
-  top: 45%;
-
-  /* border: 1px cyan solid; */
-  transition: all 0.2s ease-in-out;
-}
-
-.test-button {
-  border: none;
-  color: white;
-  background-color: purple;
-  padding: 10px;
-}
-
-.test-message:hover {
-  opacity: 1;
-}
-
-.test-message:hover span {
-  transform: translate(0px, 20px);
-  opacity: 1;
-}
-
-.test-message:hover div {
-  transform: translate(0px, -12px);
-}
-
 .container {
   display: inline-block;
 }
@@ -139,92 +98,86 @@ a {
   box-sizing: border-box;
   width: 65vw;
   max-width: 900px;
-  height: 90vh;
+  height: 87vh;
 
   /* grid-template-columns: 1fr 1fr; */
 
   grid-template-rows: repeat(4, 1fr);
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   grid-gap: 10px;
-
-  border: 1px firebrick solid;
 }
 
 .box {
   box-sizing: border-box;
   overflow: hidden;
-  border: 1px dodgerblue solid;
+  /* border: 1px dodgerblue solid; */
 }
 
 .project-info {
   position: relative;
   height: 100%;
   width: 100%;
-  color: white;
-
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
 }
 
 .card {
   height: 100%;
   width: 100%;
-  background-image: url('../assets/monster-mapper-banner-2.png');
+  background-image: url('../assets/monster-mapper-banner.png');
   background-size: cover;
+
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .project-name-container {
   position: absolute;
   top: 0;
   width: 100%;
-  /* height: 40px; */
+
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .project-name {
   display: block;
-  font-family: sans-serif;
-  font-size: 48px;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 3.5vw;
 }
 
 .project-button-container {
   position: absolute;
   bottom: 0;
   width: 100%;
-  opacity: 0;
 
+  text-align: center;
+
+  opacity: 0;
   transition: all 0.2s ease-in-out;
 }
 
-.project-image-container {
-  position: relative;
-  bottom: 80px;
-}
-
 .project-button {
-  border: none;
-  color: white;
-  background-color: purple;
+  border: 2px firebrick solid;
+  width: 150px;
   padding: 10px;
-}
 
-.project-info:hover {
+  background: none;
+  color: white;
 }
 
 /* HOVERS */
 
-.project-info:hover div:nth-child(1) {
+.project-info:hover > div:nth-child(1) {
   opacity: 0.1;
 }
 
-.project-info:hover span {
-  transform: translate(0px, 20px);
+.project-info:hover > div:nth-child(2) {
+  transform: translate(0px, 3vh);
   opacity: 1;
 }
 
-.project-info:hover div:nth-child(3) {
-  transform: translate(0px, -12px);
+.project-info:hover > div:nth-child(3) {
+  transform: translate(0px, -3vh);
   opacity: 1;
 }
 
