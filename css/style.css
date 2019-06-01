@@ -7,7 +7,7 @@ main {
 }
 
 .sidebar {
-  width: 30vw;
+  width: 25vw;
   height: 100vh;
   float: left;
   position: fixed;
@@ -19,7 +19,7 @@ main {
 
 .content {
   float: right;
-  width: 70vw;
+  width: 75vw;
   height: 100vh;
   box-sizing: border-box;
   background: #4b4959;
@@ -36,14 +36,13 @@ main {
   margin: 0;
   color: #dedcea;
   font-family: sans-serif;
-  text-transform: uppercase;
   letter-spacing: 0.5vw;
 }
 
 .sidebar-body {
   box-sizing: border-box;
   height: 90%;
-  padding-top: 30vh;
+  padding-top: 20vh;
 }
 
 /* .content h2 {
@@ -69,7 +68,7 @@ a {
   transform: scale(1.5);
 }
 
-/* TEST STUFF  */
+/************* TEST STUFF  ******************/
 
 .test-container {
   height: 100px;
@@ -133,28 +132,100 @@ a {
   display: inline-block;
 }
 
+/********************** GRID ********************/
+
 .grid {
   display: grid;
   box-sizing: border-box;
   width: 65vw;
+  max-width: 900px;
+  height: 90vh;
 
   /* grid-template-columns: 1fr 1fr; */
 
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 0px;
+  grid-template-rows: repeat(4, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-gap: 10px;
 
   border: 1px firebrick solid;
 }
 
-.grid img {
-  max-width: 300px;
-  height: auto;
-}
-
 .box {
   box-sizing: border-box;
+  overflow: hidden;
   border: 1px dodgerblue solid;
+}
+
+.project-info {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: white;
+
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/monster-mapper-banner-2.png');
+  background-size: cover;
+}
+
+.project-name-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* height: 40px; */
+}
+
+.project-name {
+  display: block;
+  font-family: sans-serif;
+  font-size: 48px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-button-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.project-image-container {
+  position: relative;
+  bottom: 80px;
+}
+
+.project-button {
+  border: none;
+  color: white;
+  background-color: purple;
+  padding: 10px;
+}
+
+.project-info:hover {
+}
+
+/* HOVERS */
+
+.project-info:hover div:nth-child(1) {
+  opacity: 0.1;
+}
+
+.project-info:hover span {
+  transform: translate(0px, 20px);
+  opacity: 1;
+}
+
+.project-info:hover div:nth-child(3) {
+  transform: translate(0px, -12px);
+  opacity: 1;
 }
 
 /* row start / column start / row span / column span */
@@ -174,6 +245,7 @@ a {
 .d {
   grid-area: 2 / 2 / span 1 / span 1;
 } */
+
 /*
 @media screen and (max-width: 985px) {
   .sidebar {
