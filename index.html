@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:700|Raleway:400,700&display=swap"
       rel="stylesheet"
     />
 
     <script src="src/index.js"></script>
+    <script src="src/modal.js"></script>
 
     <title>Austin Luft</title>
   </head>
 
   <body>
     <main>
+      <div id="modal">hello modal</div>
       <div class="sidebar">
         <div class="sidebar-body">
           <h1 id="austin">AUSTIN LUFT</h1>
@@ -42,7 +45,18 @@
           <div class="grid">
             <div class="box a">
               <div class="project-info">
-                <div class="card"></div>
+                <div class="card prop"></div>
+                <div class="project-name-container">
+                  <span class="project-name">PropDash</span>
+                </div>
+                <div class="project-button-container">
+                  <button class="project-button">MORE INFO</button>
+                </div>
+              </div>
+            </div>
+            <div class="box b">
+              <div class="project-info">
+                <div class="card monster"></div>
                 <div class="project-name-container">
                   <span class="project-name">Monster Mapper</span>
                 </div>
@@ -51,7 +65,6 @@
                 </div>
               </div>
             </div>
-            <div class="box b"></div>
             <div class="box c"></div>
             <div class="box d"></div>
           </div>

@@ -137,11 +137,20 @@ a {
 .card {
   height: 100%;
   width: 100%;
-  background-image: url('../assets/monster-mapper-banner.png');
-  background-size: cover;
 
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
+}
+
+.prop {
+  background-image: url('../assets/propdash-banner.png');
+  background-size: cover;
+  background-position: top center;
+}
+
+.monster {
+  background-image: url('../assets/monster-mapper-banner.png');
+  background-size: cover;
 }
 
 .project-name-container {
