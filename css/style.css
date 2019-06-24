@@ -187,6 +187,8 @@ a {
 
   background: none;
   color: white;
+
+  cursor: pointer;
 }
 
 /* HOVERS */

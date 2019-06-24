@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
 
+    <script src="src/projectData.js"></script>
     <script src="src/index.js"></script>
     <script src="src/modal.js"></script>
 
@@ -19,7 +20,6 @@
 
   <body>
     <main>
-      <div id="modal">hello modal</div>
       <div class="sidebar">
         <div class="sidebar-body">
           <h1 id="austin">AUSTIN LUFT</h1>
@@ -50,7 +50,10 @@
                   <span class="project-name">PropDash</span>
                 </div>
                 <div class="project-button-container">
-                  <button class="project-button">MORE INFO</button>
+                  <button id="PropDash" class="project-button">
+                    MORE INFO
+                  </button>
+                  <button class="project-button">GITHUB</button>
                 </div>
               </div>
             </div>
@@ -62,11 +65,22 @@
                 </div>
                 <div class="project-button-container">
                   <button class="project-button">MORE INFO</button>
+                  <button class="project-button">GITHUB</button>
                 </div>
               </div>
             </div>
             <div class="box c"></div>
             <div class="box d"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal" class="fade-in">
+        <div class="modal-wrapper">
+          <span id="modal-close" class="modal-close">close &times;</span>
+          <div class="modal-content">
+            <div class="slideshow">IMAGES</div>
+            <p id="modal-description">DESCRIPTION</p>
+            <p></p>
           </div>
         </div>
       </div>
