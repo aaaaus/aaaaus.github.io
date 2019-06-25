@@ -4,7 +4,8 @@ const projects = [
     year: '2019',
     technologies: 'React/Redux, Rails',
     description: 'PropDash is an app that does proptech',
-    images: [1, 2, 3, 4]
+    images: ['propdash1.png', 'propdash2.png', 'propdash3.png'],
+    github: 'https://github.com/aaaaus/propdash-frontend'
   },
   {
     name: 'Monster Mapper',
