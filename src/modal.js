@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalFeatureImage = document.getElementById('feature-image');
   const modalDescription = document.getElementById('modal-description');
   const modalSlideshow = document.getElementById('modal-slideshow');
+  const modalTechnologies = document.getElementById('modal-technologies');
+  const modalGithubLink = document.getElementById('modal-github-link');
 
   //this returns an HTMLCollection, not a NodeList - cannot use forEach on this
   //const projectCards = document.getElementsByClassName('box');
@@ -40,12 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //helper to change modal inner HTML
   function renderModalContent(project) {
-    const { name, year, technologies, description, images } = project;
+    const { name, year, technologies, description, images, github } = project;
 
     modalFeatureImage.src = `./assets/project-photos/${images[0]}`;
+    modalTechnologies.innerHTML = `${technologies}`;
     modalDescription.innerHTML = `${description}`;
+    modalGithubLink.href = `${github}`;
     images.forEach(image => {
-      modalSlideshow.innerHTML += `<img id="$$$$$$$$$$" class="slideshow-image" src="./assets/project-photos/${image}" />`;
+      modalSlideshow.innerHTML += `<div class="slideshow-frame"><img class="slideshow-image" src="./assets/project-photos/${image}" /></div>`;
+      // modalSlideshow.innerHTML += `<div class="slideshow-frame"></div>`;
     });
     setGalleryNodes();
     changeFeaturedImage(images, galleryNodes);
@@ -66,5 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
   modalClose.addEventListener('click', () => {
     modal.style.display = 'none';
     modalSlideshow.innerHTML = '';
+    //dump all other attributes too
   });
 });
