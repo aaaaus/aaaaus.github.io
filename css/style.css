@@ -16,6 +16,7 @@ main {
 .sidebar {
   width: 25vw;
   height: 100vh;
+  min-height: 766px;
   float: left;
   position: fixed;
   box-sizing: border-box;
@@ -28,6 +29,7 @@ main {
   float: right;
   width: 75vw;
   height: 100vh;
+  min-height: 766px;
   box-sizing: border-box;
   /* background: #4b4959; */
   background: var(--bg-color-2);
@@ -74,7 +76,7 @@ main {
 
 .sidebar-body {
   box-sizing: border-box;
-  height: 90%;
+  height: 90vh;
   padding-top: 20vh;
 }
 
@@ -112,7 +114,8 @@ a {
   box-sizing: border-box;
   width: 65vw;
   max-width: 900px;
-  height: 87vh;
+  height: 85vh;
+  min-height: 600px;
 
   /* grid-template-columns: 1fr 1fr; */
 

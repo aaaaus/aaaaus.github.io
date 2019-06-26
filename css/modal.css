@@ -20,17 +20,6 @@
   height: 100%;
 }
 
-.modal-close {
-  float: right;
-
-  font-size: 30px;
-  color: white;
-
-  cursor: pointer;
-
-  border: 1px red solid;
-}
-
 .modal-content {
   position: absolute;
   top: 50%;
@@ -51,7 +40,7 @@
 
 .modal-images {
   box-sizing: border-box;
-  height: 70vh;
+  height: 60vh;
   margin-top: 2.5vh;
   /* border: red 1px solid; */
 }
@@ -64,7 +53,7 @@
 
 .modal-slideshow {
   box-sizing: border-box;
-  height: 20vh;
+  height: 10vh;
   padding: 15px;
   /* border: blue 1px dashed; */
 }
@@ -76,9 +65,9 @@
 
 .slideshow-frame {
   display: inline-block;
-  width: 12vw;
-  height: 12vw;
-  max-height: 150px;
+  width: 7vw;
+  height: 7vw;
+  max-height: 100%;
   max-width: 150px;
   margin: 0 1vw 0 1vw;
 }
@@ -95,6 +84,15 @@
   opacity: 0.75;
 }
 
+.modal-technologies {
+  /* color: var(--accent-1);
+  font-family: 'Raleway', sans-serif; */
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: var(--accent-1);
+  white-space: pre;
+}
+
 .modal-description {
   color: var(--accent-1);
   font-family: 'Raleway', sans-serif;
@@ -107,6 +105,15 @@
 
   background: none;
   color: white;
+
+  cursor: pointer;
+}
+
+.modal-close {
+  float: right;
+
+  font-size: 30px;
+  color: var(--accent-1);
 
   cursor: pointer;
 }

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
+  const modalContent = document.querySelector('.modal-content');
   const modalClose = document.getElementById('modal-close');
 
   const modalFeatureImage = document.getElementById('feature-image');
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentProject = {};
   let galleryNodes = [];
 
-  //HELPERS//
+  //OPEN AND RENDER MODAL HELPERS
 
   //helper to set project on click
   function setCurrentProject(name) {
@@ -28,10 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  //selects DOM nodes AFTER they exist
   function setGalleryNodes() {
     galleryNodes = document.querySelectorAll('.slideshow-image');
   }
 
+  //changes src attribute of featured image based on slideshow image clicked
   function changeFeaturedImage(images, galleryNodes) {
     galleryNodes.forEach((node, index) => {
       node.addEventListener('click', () => {
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const { name, year, technologies, description, images, github } = project;
 
     modalFeatureImage.src = `./assets/project-photos/${images[0]}`;
-    modalTechnologies.innerHTML = `${technologies}`;
+    modalTechnologies.innerHTML = `  ${technologies}`;
     modalDescription.innerHTML = `${description}`;
     modalGithubLink.href = `${github}`;
     images.forEach(image => {
@@ -56,21 +59,40 @@ document.addEventListener('DOMContentLoaded', () => {
     changeFeaturedImage(images, galleryNodes);
   }
 
+  //CLOSE MODAL HELPERS
+
+  //close modal and clear slideshow innerHTML string
+  function closeModal() {
+    modal.style.display = 'none';
+    modalSlideshow.innerHTML = '';
+  }
+
+  //blocks propogation of closing modal if clicking on modal content itself
+  function preventHide(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
   //RUNTIME//
 
   //adds event listener to each project's "MORE INFO" button, updating value of 'currentProject'
-  projectCards.forEach(projectCard => {
-    projectCard.addEventListener('click', () => {
-      modal.style.display = 'block';
-      setCurrentProject(event.target.id);
-      renderModalContent(currentProject);
+  function modalOpenListeners() {
+    projectCards.forEach(projectCard => {
+      projectCard.addEventListener('click', () => {
+        modal.style.display = 'block'; //display modal
+        setCurrentProject(event.target.id); //sets project based on button id
+        renderModalContent(currentProject); //render current project
+      });
     });
-  });
+  }
 
-  //adds event listener to close button; clears slideshow innerHTML
-  modalClose.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modalSlideshow.innerHTML = '';
-    //dump all other attributes too
-  });
+  //creates closing event listeners and blocks propogation when clicking on modal content itself
+  function modalCloseListeners() {
+    modal.addEventListener('click', closeModal);
+    modalClose.addEventListener('click', closeModal);
+    modalContent.addEventListener('click', preventHide);
+  }
+
+  modalOpenListeners();
+  modalCloseListeners();
 });
