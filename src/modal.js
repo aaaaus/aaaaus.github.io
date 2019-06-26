@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
     modalFeatureImage.src = `./assets/project-photos/${images[0]}`;
     modalTechnologies.innerHTML = `  ${technologies}`;
     modalDescription.innerHTML = `${description}`;
+    // modalButton.onclick = function() {
+    //   `location.href=${github}`;
+    // };
     modalGithubLink.href = `${github}`;
     images.forEach(image => {
       modalSlideshow.innerHTML += `<div class="slideshow-frame"><img class="slideshow-image" src="./assets/project-photos/${image}" /></div>`;
@@ -69,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //blocks propogation of closing modal if clicking on modal content itself
   function preventHide(e) {
-    e.preventDefault();
     e.stopPropagation();
   }
 
