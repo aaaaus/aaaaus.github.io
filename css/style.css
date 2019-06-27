@@ -146,13 +146,13 @@ a {
 }
 
 .prop {
-  background-image: url('../assets/propdash-banner.png');
+  background-image: url('../assets/banners/propdash-banner.png');
   background-size: cover;
   background-position: top center;
 }
 
 .monster {
-  background-image: url('../assets/monster-mapper-banner.png');
+  background-image: url('../assets/banners/monster-mapper-banner.png');
   background-size: cover;
 }
 
